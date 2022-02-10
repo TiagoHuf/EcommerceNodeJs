@@ -1,6 +1,6 @@
 import { Router } from "express";
-import ProductController from "../controllers/ProductController";
-import ProductsController from "../controllers/ProductController";
+
+import ProductsController from "../controllers/ProductsController";
 
 const routes = Router();
 
@@ -8,10 +8,10 @@ routes.post("/", ProductsController.create);
 
 routes.get("/", ProductsController.list);
 
-routes.get("/:id", ProductController.findById);
+routes.get("/:id", ProductsController.findById);
 
-routes.put("/:id", ProductController.update);
+routes.put("/:id", ProductsController.update);
 
-routes.delete("/:id", ProductController.delete);
+routes.delete("/:id", ProductsController.delete);
 
 export default routes;
